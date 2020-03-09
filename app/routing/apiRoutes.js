@@ -1,15 +1,28 @@
-
-
 module.exports = function (app) {
 
 
-    console.log("THIS ISN't DONE YET")
-    // app.get("/", function (req, res){
-    //     res.sendFile(path.join(__dirname, "../public/home.html"));
-    // });
+    app.get("/api/friends", function (req, res){
+        console.log("FRIENDS GET REQUEST CAME IN")
+    });
 
-    // app.get("/survey", function(req, res){
-    //     res.sendFile(path.join(__dirname, "../public/survey.html"))
-    // });
+    app.post("/api/friends", function(req, res){
+        console.log("FRIENDS POST REQUEST CAME IN")
+        var newFriend = req.body; 
 
+        friends.push(newFriend);
+        
+        var friendshipScores = [];
+
+         friendshipScores.push(friends.forEach(friend => {
+
+            calcFriendship(newFriend, friend);
+
+            }));
+        
+        var bestFriend = findClosestMatch(friends, friendshipScores);
+
+        return bestFriend;
+    
+    });
 };
+
