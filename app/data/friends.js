@@ -1,5 +1,3 @@
-module.exports = function (app) {
-
     var friends = [
         {
             "name": "Jeff Bezos",
@@ -10,43 +8,5 @@ module.exports = function (app) {
     ];
 
 
-    function calcFriendship (user, friend) {
-
-        var scoreComparison = [];
-
-        user.scores.forEach((element1) => friend.scores.forEach((element2) => {
-            var diff = element1 - element2;
-            scoreComparison.push(abs(diff))
-        }));
-
-
-        var compatibility = scoreComparison.reduce(function (el1, el2){
-            return el1 +++ el2; 
-        }, 0);
-
-        return compatibility
-        
-    };
-
-
-
-    function findClosestMatch (friends, compatibility) {
-
-        var bestFriend = indexOf(Array.min(compatibility));
-
-        return friends[bestFriend]
-    };
-
-    function addToFriends (user) {
-
-        friends.push(user)
-    };
-
-
-    Array.min = function (array) {
-        return Math.min.apply(Math, array)
-    };
-
-};
-
+exports.friends = friends;
 

@@ -1,0 +1,13 @@
+div.form-group {
+    padding: 10px;
+    margin: 5px;
+    border: thin, solid, grey;
+};
+
+.label.btn.btn-secondary {
+    padding: 10px;
+};
+
+.label.btn.btn-secondary.active {
+    padding: 10px;
+};
