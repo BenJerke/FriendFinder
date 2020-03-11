@@ -6,19 +6,18 @@ var app = express();
 module.exports = function (app) {
 
     app.get("/api/friends", function (req, res){
-        console.log("FRIENDS GET REQUEST CAME IN")
+        console.log("VIEW ALL FRIENDS REQUEST CAME IN")
+        
     });
 
     app.post("/api/friends", function(req, res){
-        console.log("FRIENDS POST REQUEST CAME IN")
+        console.log("NEW FRIEND POSTED")
 
-        var friendData = require("../data/friends.js");
-
-        var newFriend = req.body; 
+        console.log(req);
 
         console.log(newFriend);
         
-        friendData.friends.push(newFriend);
+        var friends = [];
         
         var friendshipScores = [];
 
@@ -35,6 +34,10 @@ module.exports = function (app) {
         return bestFriend;
     
     });
+
+
+
+
 };
 
     function calcFriendship (user, friend) {

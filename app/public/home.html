@@ -3,10 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <title>FFHome</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
   </head>
   <body>
-      
-  <p> this is the homepage </p>
-
+    <div class="jumbotron">
+      <h1>Welcome to Friend Finder!</h1>
+      <h3>View friends in our database, then take the survey to see who your best friend is!</h3>
+      <a href="/api/friends"> <button class="btn btn-danger-btn-lg"><span class = "fa fa-eye"></span>View Friends</button></a>
+      <a href="/survey"> <button class="btn btn-danger-btn-lg"><span class = "fa fa-eye"></span>Take Survey</button></a>
+    </div>
   </body>
 </html>
